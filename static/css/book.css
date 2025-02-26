@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #ccc;
+    padding: 10px 100px;
+    background-color:#474747;
+}
+
+.logo{
+    font-size: 40px;
+}
+
+.logo > i{
+    padding-right: 10px;
+}
+
+.book_info {
+    border: 2px solid #ccc;
+    padding: 20px;
+    font-size: 20px;
+    margin:100px 100px;
+    background-color:#803c40;
+    border-radius: 50px;
+    margin-top:10px;
+}
+
+
+.book_buy{
+    padding: 15px;
+    font-size: 20px;
+    width: 200px;
+    height: 60px;
+    background-color:green;
+    transition: 0.3s;
+    opacity: 0.8;
+    border-radius:50px;
+}
+
+.header_buttons > a {
+    color: #000;
+    font-size: 30px;
+    transition: 0.3s;
+    border: 2px solid #000;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #ffffff;
+
+}
+
+.header_buttons > a:hover{
+    background:#e3092a;
+}
+
+.header_buttons > input{
+    font-size: 20px;
+    padding: 6px 10px;
+    margin-right: 20px;
+}
+
+
+.book_buy:hover{
+    opacity: 1;
+}
+
