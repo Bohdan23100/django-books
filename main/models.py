@@ -18,7 +18,6 @@ class Author(models.Model):
 
 class Category(models.Model):
     name = models.CharField(max_length=100, null=False, unique=True)
-    desc = models.TextField()
     is_visible = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now=True)
 

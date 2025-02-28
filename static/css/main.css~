@@ -26,6 +26,7 @@ body {
 }
 
 
+
 .logo > i {
     padding-right: 10px;
 }
