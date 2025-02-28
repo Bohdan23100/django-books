@@ -26,7 +26,6 @@ body {
 }
 
 
-
 .logo > i {
     padding-right: 10px;
 }
@@ -110,12 +109,12 @@ body {
 }
 
 .select_reset > button{
-    background-color:green;
-    opacity: 0.7;
+    border: none;
+    background-color: rgba(0, 128, 0, 0.7);
 }
 
 .select_reset > button:hover{
-    opacity:0.9;
+    background-color:rgba(0, 128, 0, 1);
 }
 
 .section_books{

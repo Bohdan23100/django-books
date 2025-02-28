@@ -8,7 +8,8 @@
 			src="https://kit.fontawesome.com/c93819fc22.js"
 			crossorigin="anonymous"
 		></script>
-		<link rel="stylesheet" href="{% static 'css/main.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/main.css' %}">
+		<link rel="stylesheet" href="{% static 'css/profile.css' %}">
 		<title>{% block title %}{% endblock %}</title>
 	</head>
 	<body>
@@ -17,7 +18,7 @@
 				<a class="logo" href="{% url 'main' %}"><i class="fa-solid fa-book"></i>Books</a>
 				<div class="header_buttons">
 					<input type="text" placeholder="Search" />
-					<a href="profile.html"><i class="fa-solid fa-user"></i></a>
+					<a href="{% url 'profile' %}"><i class="fa-solid fa-user"></i></a>
 				</div>
 			</header>
             {% block content %}

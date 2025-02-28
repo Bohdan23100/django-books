@@ -18,7 +18,7 @@
             <span class="logo"><i class="fa-solid fa-book"></i>Books</span>
             <div class="header_buttons">
                 <input type="text" placeholder="Search" />
-                <a href="{% url 'profile' %}"><i class="fa-solid fa-user"></i></a>
+                <a href="profile.html"><i class="fa-solid fa-user"></i></a>
             </div>
         </header>
         <article class="book_info">
