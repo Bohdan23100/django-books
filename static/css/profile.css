@@ -71,7 +71,7 @@ body {
     background-color: rgba(255, 0, 0, 0.7);
     transition:0.3s;
     border-radius: 50px;
-    color: white;
+    color: red;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -80,3 +80,4 @@ body {
 .profile-content > button:hover {
     background-color: rgba(255, 0, 0, 0.9);
 }
+
