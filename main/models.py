@@ -34,7 +34,7 @@ class Book(models.Model):
     desc = models.TextField()
     author = models.ForeignKey(Author,on_delete=models.CASCADE,null=False)
     category = models.ForeignKey(Category, on_delete = models.CASCADE, null = False)
-    price = models.DecimalField(max_digits=4,decimal_places=2)
+    price = models.DecimalField(max_digits=6,decimal_places=2)
     discount = models.PositiveIntegerField(default=0)
     image = models.ImageField(upload_to='static/img/books/')
     stock = models.PositiveIntegerField(default=0)

@@ -1,32 +1,18 @@
 {% extends 'layout.html' %}
 {% load static %}
 
-{% block title%}Books{% endblock %}
+{% block title %}Books{% endblock %}
 
 {% block content %}
 			<article class="content">
 				<section class="select">
   					<form action="#" method="post">
     					<div class="option">
-							<label >
-        						<input type="checkbox" name="genre" value="Romans"> Romans
-							</label><br>
-
-      						<label>
-        						<input type="checkbox" name="genre" value="Science Fiction"> Science Fiction
-     	 					</label><br>
-
-							<label>
-     	   						<input type="checkbox" name="genre" value="Fantasy"> Fantasy
-     	 					</label><br>
-
-    	  					<label>
-								<input type="checkbox" name="genre" value="Thriller"> Thriller
-     						 </label><br>
-
-							<label>
-								 <input type="checkbox" name="genre" value="Horror"> Horror
-							</label>
+							{% for category in categories %}
+							<input type="checkbox" name="genre" value="{{ category.id }}" id ="genre">
+     						<label for="genre">{{ category.name }} </label>
+							<br>
+							{% endfor %}
 						</div>
 
     					<div class="select_reset">
@@ -37,42 +23,18 @@
 				</section>
 				<section class="section_books">
 					<div class="books">
+						{% for book in books %}
 						<div class="book">
-							<a href="book.html" class="book_image">
-								<img src="https://www.singlecolorimage.com/get/c7c7c7/200x200" alt="Book 1" />
+							<a href="{% url 'book' book.id %}" class="book_image">
+								<img class="book_img" src="{{ book.image.url }}" alt="{{book.name}}" />
 							</a>
 							<div class="book_info">
-								<span class="book_title">Book 1</span>
-								<span class="book_price">10$</span>
+								<span class="book_title"> {{ book.name }}</span>
+								<span class="book_price">{{book.price}}</span>
+
 							</div>
 						</div>
-						<div class="book">
-							<a href="#" class="book_image">
-								<img src="https://www.singlecolorimage.com/get/c7c7c7/200x200" alt="Book 1" />
-							</a>
-							<div class="book_info">
-								<span class="book_title">Book 1</span>
-								<span class="book_price">10$</span>
-							</div>
-						</div>
-						<div class="book">
-							<a href="#" class="book_image">
-								<img src="https://www.singlecolorimage.com/get/c7c7c7/200x200" alt="Book 1" />
-							</a>
-							<div class="book_info">
-								<span class="book_title">Book 1</span>
-								<span class="book_price">10$</span>
-							</div>
-						</div>
-						<div class="book">
-							<a href="#" class="book_image">
-								<img src="https://www.singlecolorimage.com/get/c7c7c7/200x200" alt="Book 1" />
-							</a>
-							<div class="book_info">
-								<span class="book_title">Book 1</span>
-								<span class="book_price">10$</span>
-							</div>
-						</div>
+						{% endfor %}
 					</div>
 				</section>
 			</article>

@@ -2,13 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script
-			src="https://kit.fontawesome.com/c93819fc22.js"
-            crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/c93819fc22.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="book.css">
     <title>Book</title>
 </head>
@@ -18,28 +14,32 @@
             <span class="logo"><i class="fa-solid fa-book"></i>Books</span>
             <div class="header_buttons">
                 <input type="text" placeholder="Search" />
-                <a href="{% url 'profile' %}"><i class="fa-solid fa-user"></i></a>
+                <a href="profile.html"><i class="fa-solid fa-user"></i></a>
             </div>
         </header>
+
         <article class="book_info">
-            <img src="https://www.singlecolorimage.com/get/c7c7c7/300x300" alt="Book 1" />
             <section class="book_details">
-                <div>
+                <img src="https://www.singlecolorimage.com/get/c7c7c7/300x300" alt="Book 1" />
+                <div class="book_info_text">
                     <h2><span class="book_title">Book 1</span></h2>
                     <h3><span class="book_author">Author 1</span></h3>
                     <h3><span class="book_price">10$</span></h3>
-                </div>
-                <div class="buy">
-                    <h1><button class="book_buy">Buy</button></h1>
+                    <button class="book_buy">Buy</button>
                 </div>
             </section>
+
             <section class="book_description">
-                <p></p>
+                <h1>About</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta voluptate placeat, doloremque deleniti odit harum velit magnam nobis quo fugiat laboriosam quas soluta quaerat excepturi quos quam tempora maiores sit!</p>
+
+                <h1>Author</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro impedit repudiandae, eius voluptatum perferendis distinctio? Labore, assumenda unde alias rem fugiat mollitia tempora ab, reiciendis temporibus saepe consequuntur, aliquid cum.</p>
             </section>
         </article>
+
         <footer class="footer">
-            <span>Books</span>
-            <span>2021</span>
+            <span>Books</span> | <span>2021</span>
         </footer>
     </main>
 </body>

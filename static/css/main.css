@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 
-
-
 body {
     padding: 0;
     margin: 0;
@@ -10,6 +8,7 @@ body {
     font-weight: 400;
     font-style: normal;
 }
+
 
 .header {
     display: flex;
@@ -22,7 +21,8 @@ body {
 
 .logo{
     font-size: 40px;
-    color:#fff;
+    color: #fff;
+    text-decoration: none;
 }
 
 
@@ -32,7 +32,6 @@ body {
 
 .header_buttons > a {
     background-color: #ffffff;
-    transition: 0.3s;
     font-size: 30px;
     color: #000;
     padding: 10px;
@@ -48,32 +47,20 @@ body {
     font-size: 20px;
     padding: 6px 10px;
     margin-right: 20px;
-
 }
 
 .content{
     display: grid;
     grid-template-columns: 1fr 3fr;
-    padding:30px 100px;
-    min-height:100vh;
+    height: 100vh;
+    padding: 30px 100px;
 }
 
-.option{
-    list-style-type: circle;
+.section_books {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
-
-.footer{
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    height: 50px;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    line-height: 50px;
-}
-
-
 
 .books {
     display: grid;
@@ -91,36 +78,107 @@ body {
     padding: 10px;
     border-radius: 10px;
     background-color: #f9f9f9;
-    opacity:0.8;
 }
 
-.book:hover{
-    opacity:1;
-}
 .book_info {
     display: flex;
     justify-content: space-between;
     width: 200px;
 }
 
-.book > img {
+.book_img {
     width: 200px;
     height: 200px;
+    object-fit: contain;
 }
 
-.select_reset > button{
-    padding: 10px 20px;
-    border-radius: 20px;
+.option{
+    list-style-type: circle;
+}
+
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+}
+
+.main {
+  min-height: 100%;
+  padding-bottom: 50px;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.book_info {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.book_details {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.book_details img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.book_info_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 500px;
+}
+
+.book_details h2, .book_details h3 {
+    margin-bottom: 10px;
+}
+
+.book_buy {
+    background-color: #474747;
+    color: white;
     border: none;
-    background-color: rgba(0, 128, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;  /* Adjust button alignment */
+    margin-top: 20px;  /* Add some margin for separation */
 }
 
-.select_reset > button:hover{
-    background-color:rgba(0, 128, 0, 1);
+.book_buy:hover {
+    background-color: #333;
 }
 
-.section_books{
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-start;
+.book_description {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #555;
 }

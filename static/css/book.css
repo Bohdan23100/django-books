@@ -1,67 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-
-body {
-    padding: 0;
+* {
     margin: 0;
-    font-family: "Bebas Neue", serif;
-    font-weight: 400;
-    font-style: normal;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: "Bebas Neue", sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 2px solid #ccc;
     padding: 10px 100px;
     background-color:#474747;
+    color: white;
 }
 
-.logo{
+.logo {
     font-size: 40px;
 }
 
-.logo > i{
+.logo > i {
     padding-right: 10px;
 }
 
-.book_info {
-    border: 2px solid #ccc;
-    padding: 20px;
-    font-size: 20px;
-    margin:100px 100px;
-    background-color:#803c40;
-    border-radius: 50px;
-    margin-top:10px;
-}
-
-
-.book_buy{
-    padding: 15px;
-    font-size: 20px;
-    width: 200px;
-    height: 60px;
-    background-color:green;
-    transition: 0.3s;
-    opacity: 0.8;
-    border-radius:50px;
-}
-
 .header_buttons > a {
-    color: #000;
-    font-size: 30px;
-    transition: 0.3s;
-    border: 2px solid #000;
-    padding: 10px;
-    border-radius: 20px;
     background-color: #ffffff;
-
+    font-size: 30px;
+    color: #000;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
 }
 
 .header_buttons > a:hover{
-    background:#e3092a;
+    background-color: #e3092a;
 }
 
 .header_buttons > input{
@@ -70,8 +58,77 @@ body {
     margin-right: 20px;
 }
 
-
-.book_buy:hover{
-    opacity: 1;
+.book_info {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
+.book_details {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.book_details img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.book_info_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 500px;
+}
+
+.book_details h2, .book_details h3 {
+    margin-bottom: 10px;
+}
+
+.book_buy {
+    background-color: #474747;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;  /* Adjust button alignment */
+    margin-top: 20px;  /* Add some margin for separation */
+}
+
+.book_buy:hover {
+    background-color: #333;
+}
+
+.book_description {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #555;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
