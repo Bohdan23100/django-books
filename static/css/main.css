@@ -182,3 +182,36 @@ html, body {
     font-size: 16px;
     color: #555;
 }
+
+
+.profile {
+    text-align: center;
+    padding: 30px;
+}
+.profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+.profile h1 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+.profile h2 {
+    font-size: 18px;
+    color: gray;
+    margin-bottom: 20px;
+}
+.profile button {
+    padding: 10px 20px;
+    border: none;
+    background: #474747;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.profile button:hover {
+    background: #333;
+}

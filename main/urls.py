@@ -5,6 +5,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('',views.main,name = 'main'),
+    path('category_books/',views.category_books,name = 'category_books'),
 ] + static(settings.STATIC_URL, dokument_root=settings.STATIC_ROOT)
 
 
