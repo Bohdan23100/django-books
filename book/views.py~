@@ -31,20 +31,28 @@ def cart_items_plus(request, item_id):
     session_id = request.session.get('cart_id')
     if not session_id:
         return redirect('cart_page')
+
     cart = get_object_or_404(Cart, session_id=session_id)
     cart_item = get_object_or_404(CartItem, id=item_id, cart=cart)
+
     cart_item.quantity += 1
     cart_item.save()
+
     return redirect('cart_page')
+
+
 def cart_items_minus(request, item_id):
     session_id = request.session.get('cart_id')
     if not session_id:
         return redirect('cart_page')
+
     cart = get_object_or_404(Cart, session_id=session_id)
     cart_item = get_object_or_404(CartItem, id=item_id, cart=cart)
+
     if cart_item.quantity > 1:
         cart_item.quantity -= 1
         cart_item.save()
     else:
         cart_item.delete()
+
     return redirect('cart_page')

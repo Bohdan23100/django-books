@@ -28,7 +28,7 @@ body {
     padding-right: 10px;
 }
 
-.header_buttons > a {
+.header_buttons > fa-solid fa-user {
     color: #000;
     font-size: 30px;
     transition: 0.3s;
@@ -38,7 +38,7 @@ body {
     background-color: #ffffff;
 }
 
-.header_buttons > a:hover{
+.header_buttons > fa-solid fa-user:hover{
     background-color: #e3092a;
 }
 
@@ -92,4 +92,3 @@ body {
 .profile-content > button:hover {
     background-color: rgba(255, 0, 0,1);
 }
-

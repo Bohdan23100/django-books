@@ -11,7 +11,7 @@
                 <h2><span class="book_title">{{ book.name }}</span></h2>
                 <h3><span class="book_author">{{ book.author }}</span></h3>
                 <h3><span class="book_price">{{ book.price }}</span></h3>
-                <button class="book_buy">Buy</button>
+                <a class="book_buy" href="{% url 'add_to_cart' book.id %}">Buy</a>
             </div>
         </section>
         <section class="book_description">

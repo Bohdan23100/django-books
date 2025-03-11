@@ -11,7 +11,7 @@
     					<div class="option">
 							{% for category in categories %}
 							<input type="checkbox" name="genre[]" value="{{ category.id }}" id ="genre_{{ category.id }}"
-								   checked="{% if category.id in checked_categories %} checked {% endif %}">
+								   {% if category.id in selected_categories %} checked {% endif %}>
      						<label for="genre_{{ category.id }}">{{ category.name }} </label>
 							<br>
 							{% endfor %}

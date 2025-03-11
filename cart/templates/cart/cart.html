@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title%}Books{% endblock %}
+
+{% block content %}
+<div class="cart-container">
+    <h1>Your Shopping Cart</h1>
+
+    <div class="cart-items">
+        {%if cart_items%}
+        {%for item in cart_items%}
+        <div class="cart-item">
+            <div class="cart-item-details">
+                <img class="cart-item-image" src="{{item.book.image.url}}">
+                <h3>{{item.book.name}}</h3>
+                <p>{{item.book.author}}</p>
+            </div>
+
+
+            <div class="cart-item-quantity">
+                <button class="cart_items_minus" data-id="{{ item.id }}">-</button>
+                <input type="number" value="{{ item.quantity }}" min="1" readonly>
+                <button class="cart_items_plus" data-id="{{ item.id }}">+</button>
+            </div>
+
+
+            <div class="cart-item-price">
+                <span>{{item.total_price}}</span>
+            </div>
+            <button class="remove-item">Remove</button>
+        </div>
+        {%endfor%}
+        {%endif%}
+    </div>
+    <div class="cart-summary">
+        <div class="summary-item total">
+            <span>Total</span>
+            <span>2323</span>
+        </div>
+
+        <div class="checkout-btn">
+            <button>Proceed to Checkout</button>
+        </div>
+    </div>
+</div>
+{% endblock %}

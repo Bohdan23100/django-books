@@ -19,6 +19,9 @@
 					<input type="text" placeholder="Search" />
 					<a href="{% url 'user_profile' %}"><i class="fa-solid fa-user"></i></a>
 				</div>
+				<div class="cart">
+					<a href="{% url 'cart' %}"><i class="fa-solid fa-cart-shopping"></i></a>
+				</div>
 			</header>
             {% block content %}
             {% endblock %}
